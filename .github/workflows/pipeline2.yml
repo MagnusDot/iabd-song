@@ -1,0 +1,15 @@
+name: Jokes on u
+run-name: Jokes 😂 
+on: 
+    push:
+        branches: 
+            - main
+jobs:
+    jokes-pipline:
+        runs-on: ubuntu-latest
+        steps:
+         - name: Check out repository code
+           uses: actions/checkout@v4
+         - run: ls ${{ github.workspace }}
+
+            

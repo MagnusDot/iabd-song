@@ -3,7 +3,7 @@ run-name: 🚀🚀🚀🚀🚀
 on: 
   push:
     branches:
-      - main
+      - caca
 jobs:
   echo-pipeline:
     runs-on: ubuntu-latest
@@ -21,10 +21,6 @@ jobs:
       - run: dad-jokes
       - name: Create report file
         run: dad-jokes > report.txt
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-
       - name: List files in the repository 2
         run: ls ${{ github.workspace }}
    
