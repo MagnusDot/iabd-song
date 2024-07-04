@@ -17,6 +17,14 @@ jobs:
             node-version: '20.x'
          - run: node -v
          - run: npm install --global @mikemcbride/dad-jokes
-         - run: dad-jokes
+         - run: dad-jokes > report.txt
+         - name: Déployement
+           uses: s0/git-publish-subdir-action@develop
+           env:
+                REPO: self
+                BRANCH: main
+                FOLDER: ./
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                MESSAGE: "Ajout d'une blage : ({sha}) {msg}"
 
             
