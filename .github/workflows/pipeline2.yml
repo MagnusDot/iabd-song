@@ -16,5 +16,7 @@ jobs:
            with:
             node-version: '20.x'
          - run: node -v
+         - run: npm install --global @mikemcbride/dad-jokes
+         - run: dad-jokes
 
             
