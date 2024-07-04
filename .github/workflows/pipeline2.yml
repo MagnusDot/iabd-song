@@ -26,5 +26,8 @@ jobs:
                 FOLDER: ./
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 MESSAGE: "Ajout d'une blage : ({sha}) {msg}"
-
-            
+    echo-lol:
+        needs: jokes-pipline
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "lol"
