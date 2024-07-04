@@ -1,0 +1,20 @@
+name: linter
+run-name: 🚀🚀 linter 🚀🚀🚀
+on: 
+  push:
+    branches:
+      - main
+jobs:
+    lint-index:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out repository code
+              uses: actions/checkout@v4
+            - name: Use Node.js
+              uses: actions/setup-node@v4
+              with:
+                 node-version: '20.x'
+            - name: run eslint
+              run: npx eslint index.js
+        
+            
