@@ -1,0 +1,11 @@
+name: simple
+run-name: 🚀🚀🚀🚀🚀
+on: 
+  push:
+    branches:
+      - main
+jobs:
+    echo-simple:
+        runs-on: ubuntu-latest
+        steps: 
+            - run: echo 'Hello, World!'
